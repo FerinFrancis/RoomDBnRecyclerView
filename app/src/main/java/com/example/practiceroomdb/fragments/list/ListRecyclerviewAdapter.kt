@@ -4,9 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.practiceroomdb.R
-import com.example.practiceroomdb.data.User
+import com.example.practiceroomdb.model.User
 import com.example.practiceroomdb.databinding.CustomRowBinding
 
 class ListRecyclerviewAdapter: RecyclerView.Adapter<ListRecyclerviewAdapter.MyViewHolder>() {
@@ -31,6 +32,11 @@ class ListRecyclerviewAdapter: RecyclerView.Adapter<ListRecyclerviewAdapter.MyVi
         binding.firstNameTxt.text = currentItem.firstName.toString()
         binding.lastNameTxt.text = currentItem.lastName.toString()
         binding.ageTxt.text = currentItem.age.toString()
+
+        binding.rowLayout.setOnClickListener {
+            val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
     }
 
     inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

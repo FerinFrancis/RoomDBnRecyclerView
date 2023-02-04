@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.practiceroomdb.R
-import com.example.practiceroomdb.data.UserViewModel
+import com.example.practiceroomdb.viewmodel.UserViewModel
 import com.example.practiceroomdb.databinding.FragmentListBinding
 
 

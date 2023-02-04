@@ -1,7 +1,6 @@
 package com.example.practiceroomdb.fragments.add
 
 import android.os.Bundle
-import android.text.Editable
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,8 +11,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.practiceroomdb.R
-import com.example.practiceroomdb.data.User
-import com.example.practiceroomdb.data.UserViewModel
+import com.example.practiceroomdb.model.User
+import com.example.practiceroomdb.viewmodel.UserViewModel
 import com.example.practiceroomdb.databinding.FragmentAddBinding
 
 
